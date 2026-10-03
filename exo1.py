@@ -1,14 +1,23 @@
 #Exercice1
-def division_entier_modulo() :
-     #affiche le resultat et le module de la
+def division_entier(dividende,diviseur) :
+     #affiche le resultat  de la
      #divison entiere de 2 nombres
-    dividende = int(input("Entrez le premier nombre : "))
-    diviseur = int(input("Entrer le deuxieme nombre : "))
-    
-        #quotient et modulo sont variables globales
-        #quotient retourne le resultat de la division entiere
-    
-    print("le resultat la division entiere de",dividende,"par",diviseur,"est",dividende//diviseur)
-    print("le reste la division de",dividende,"par",diviseur,"est",dividende%diviseur)
+     #(float,float)->(int)
 
-division_entier_modulo()
+    quotient = dividende//diviseur
+    return quotient
+
+def division_modulo(dividende,diviseur) :
+    #affiche le modulo  de la
+    #divison entiere de 2 nombres
+    #(float,float)->(int)
+    modulo = dividende%diviseur
+    return int(modulo)
+
+dividende = float(input("Entrer la dividende de l'operation"))
+diviseur = float(input("Entrer le diviseur de l'operation"))
+quotient = division_entier(dividende,diviseur)
+modulo = division_modulo(dividende,diviseur)
+print("le resultat la division entiere de",dividende,"par",diviseur,"est",quotient)
+print("le reste la division de",dividende,"par",diviseur,"est",modulo)
+
