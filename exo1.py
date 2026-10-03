@@ -3,7 +3,6 @@ def division_entier(dividende,diviseur) :
      #affiche le resultat  de la
      #divison entiere de 2 nombres
      #(float,float)->(int)
-
     quotient = dividende//diviseur
     return quotient
 
@@ -16,6 +15,11 @@ def division_modulo(dividende,diviseur) :
 
 dividende = float(input("Entrer la dividende de l'operation"))
 diviseur = float(input("Entrer le diviseur de l'operation"))
+while diviseur == 0 :
+    dividende = float(input("Entrer la dividende de l'operation"))
+    diviseur = float(input("Entrer le diviseur de l'operation"))
+
+    
 quotient = division_entier(dividende,diviseur)
 modulo = division_modulo(dividende,diviseur)
 print("le resultat la division entiere de",dividende,"par",diviseur,"est",quotient)
